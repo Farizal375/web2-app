@@ -1,0 +1,12 @@
+services:
+  web2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_APP_NAME: "Web Beta"
+        VITE_THEME_COLOR: "#2563eb"
+    container_name: web2
+    ports:
+      - "8081:80"
+    restart: unless-stopped
